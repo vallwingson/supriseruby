@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Amelia Mutiara Rubina</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background music -->
+    <audio autoplay loop>
+        <source src="backsound.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Landing Page -->
+    <section id="landing" class="page">
+        <div class="content">
+            <h1>Untuk Amelia Mutiara Rubina, dari seseorang yang mencintaimu</h1>
+            <p>Ada sesuatu yang spesial menunggumu di sini...</p>
+            <button onclick="showPage('letter')">Klik untuk lanjutkan</button>
+        </div>
+    </section>
+
+    <!-- Surat Cinta -->
+    <section id="letter" class="page hidden">
+        <div class="content">
+            <h1>Kata-kata dari hati untukmu</h1>
+            <p>Amelia, sejak pertama kali kita bertemu, aku tahu bahwa kamu adalah orang yang spesial. Setiap hari bersamamu adalah hadiah tak ternilai. Aku bersyukur untuk setiap senyuman, setiap tawa, dan setiap momen yang kita habiskan bersama. Aku mencintaimu lebih dari yang kata-kata bisa ungkapkan, dan aku berharap kita terus menciptakan kenangan indah bersama.</p>
+            <button onclick="showPage('gallery')">Lanjutkan</button>
+        </div>
+    </section>
+
+    <!-- Galeri Kenangan -->
+    <section id="gallery" class="page hidden">
+        <div class="content">
+            <h1>Kenangan Kita</h1>
+            <div class="gallery">
+                <img src="foto1.jpg" alt="Foto 1">
+                <img src="foto2.jpg" alt="Foto 2">
+                <img src="foto3.jpg" alt="Foto 3">
+            </div>
+            <button onclick="showPage('surprise')">Lanjutkan</button>
+        </div>
+    </section>
+
+    <!-- Halaman Hadiah -->
+    <section id="surprise" class="page hidden">
+        <div class="content">
+            <h1>Ini Hadiah Kecilku untukmu</h1>
+            <p>Aku sudah mempersiapkan ini untukmu, semoga kamu suka. Tidak sabar melihat senyummu saat menerimanya.</p>
+            <img src="hadiah.jpg" alt="Hadiah">
+            <button onclick="showPage('end')">Lihat Hadiahmu</button>
+        </div>
+    </section>
+
+    <!-- Halaman Penutup -->
+    <section id="end" class="page hidden">
+        <div class="content">
+            <h1>Terima Kasih Telah Ada di Hidupku</h1>
+            <p>Amelia, kamu adalah cahaya dalam hidupku, dan aku tidak sabar untuk terus menghabiskan hari-hari ke depan bersamamu. Terima kasih untuk semua kebahagiaan yang kamu bawa.</p>
+        </div>
+    </section>
+
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.add('hidden');
+            });
+            document.getElementById(pageId).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
